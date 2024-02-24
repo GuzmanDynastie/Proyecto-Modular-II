@@ -1,0 +1,15 @@
+.nav.justify-content-center {
+    background-color: rgb(184, 180, 203);
+    font-size: small;
+    font-weight: bold;
+}
+
+.video {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Ajusta el ancho según tus necesidades */
+    max-width: 800px; /* Opcional: establece un ancho máximo si lo deseas */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
