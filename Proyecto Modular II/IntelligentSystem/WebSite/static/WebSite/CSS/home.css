@@ -1,7 +1,42 @@
-.nav.justify-content-center {
-    background-color: rgb(184, 180, 203);
-    font-size: small;
+nav {
+    background-color: rgb(53, 58, 64);
+    position: fixed !important;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .navbar-brand {
+    color: white;
+    font-size: larger;
     font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+}
+
+nav .navbar-brand:hover {
+    color: rgb(153, 156, 161);
+}
+
+nav div .form-control {
+    width: 500px;
+}
+
+nav div .boton__ {
+    color: rgb(153, 156, 161);
+    border: 1px solid rgb(153, 156, 161);
+    margin-right: 10px;
+}
+
+.camara__ {
+    background-color: rgb(153, 156, 161);
+}
+
+a.dropdown__ {
+    color: rgb(153, 156, 161);
+}
+
+ol.carrusel__ {
+    list-style: none;
 }
 
 .video {
