@@ -1,0 +1,42 @@
+nav {
+    background-color: rgb(53, 58, 64);
+    position: fixed !important;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .navbar-brand {
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+}
+
+nav .navbar-brand:hover {
+    color: rgb(153, 156, 161);
+}
+
+nav div .form-control {
+    width: 500px;
+}
+
+nav div .boton__ {
+    color: rgb(153, 156, 161);
+    border: 1px solid rgb(153, 156, 161);
+    margin-right: 10px;
+}
+
+a.dropdown__ {
+    color: rgb(153, 156, 161);
+}
+
+.video {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Ajusta el ancho según tus necesidades */
+    max-width: 800px; /* Opcional: establece un ancho máximo si lo deseas */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
