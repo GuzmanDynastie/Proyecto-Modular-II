@@ -11,7 +11,9 @@ def gen_frame():
         if not ret:
             break
         else:
-            _, encode = cv2.imencode('.jpg', frame)
+            resized_frame = cv2.resize(frame, (1080, 720))
+            
+            _, encode = cv2.imencode('.jpg', resized_frame)
             frame = encode.tobytes()
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')

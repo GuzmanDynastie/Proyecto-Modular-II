@@ -40,11 +40,6 @@ ol.carrusel__ {
 }
 
 .video {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%; /* Ajusta el ancho según tus necesidades */
-    max-width: 800px; /* Opcional: establece un ancho máximo si lo deseas */
-    height: auto; /* Para mantener la proporción de la imagen */
+    display: flex;
+    
 }
