@@ -31,12 +31,38 @@ a.dropdown__ {
     color: rgb(153, 156, 161);
 }
 
+.contenedor-columna {
+    display: flex;
+    justify-content: center;
+    border: 3px solid rgb(153, 156, 161);
+    border-radius: 10px;
+    width: 475px;
+    margin-left: 67%;
+    margin-top: 3%;
+}
+
+.producto-escaneado {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 30px 0px 35px 70px;
+}
+
 .video {
     position: fixed;
-    left: 50%;
-    top: 50%;
+    left: 31%;
+    top: 56%;
     transform: translate(-50%, -50%);
-    width: 60%; /* Ajusta el ancho según tus necesidades */
-    max-width: 800px; /* Opcional: establece un ancho máximo si lo deseas */
-    height: auto; /* Para mantener la proporción de la imagen */
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+h3 {
+    padding: 20px 0px;
+    border-bottom: 3px solid rgb(153, 156, 161);
+}
+
+h1 {
+    padding-top: 90px;
+    padding-left: 100px;
 }
