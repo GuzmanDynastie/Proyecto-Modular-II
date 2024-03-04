@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import StreamingHttpResponse
 from django.views.decorators.http import require_POST
 import cv2
@@ -10,16 +10,20 @@ stop_event = threading.Event()
 
 def gen_frame():
     while not stop_event.is_set():
-        ret, frame = cap.read()
-        if not ret:
-            break
+        if cap.isOpened():  # Verificar si la cámara está abierta
+            ret, frame = cap.read()
+
+            if not ret:
+                break
+            else:
+                resized_frame = cv2.resize(frame, (1080, 720))
+
+                _, encode = cv2.imencode('.jpg', resized_frame)
+                frame_bytes = encode.tobytes()
+                yield (b'--frame\r\n'
+                       b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n\r\n')
         else:
-            resized_frame = cv2.resize(frame, (1080, 720))
-            
-            _, encode = cv2.imencode('.jpg', resized_frame)
-            frame_bytes = encode.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n\r\n')
+            cap.open(1)  # Intentar abrir la cámara si no está abierta
 
     cap.release()  # Liberar el objeto cv2.VideoCapture al salir del bucle
 
@@ -31,4 +35,10 @@ def video(request):
 
 def stop_video(request):
     stop_event.set()
-    return redirect("http://127.0.0.1:3000/home")
+    return redirect('product_scan')
+    # return redirect("http://127.0.0.1:3000/home/")
+
+def restart_video(request):
+    stop_event.clear()
+    cap = cv2.VideoCapture(1)
+    return redirect('video')
