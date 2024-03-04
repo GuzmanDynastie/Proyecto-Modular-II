@@ -31,7 +31,7 @@ a.dropdown__ {
     color: rgb(153, 156, 161);
 }
 
-.contenedor-columna {
+/* .contenedor-columna {
     display: flex;
     justify-content: center;
     border: 3px solid rgb(153, 156, 161);
@@ -39,23 +39,23 @@ a.dropdown__ {
     width: 475px;
     margin-left: 67%;
     margin-top: 3%;
-}
+} */
 
-.producto-escaneado {
+/* .producto-escaneado {
     display: flex;
     justify-content: center;
     width: 300px;
     margin: 30px 0px 35px 70px;
-}
+} */
 
-.video {
+/* .video {
     position: fixed;
     left: 31%;
     top: 56%;
     transform: translate(-50%, -50%);
     border: 5px solid;
     border-radius: 10px;
-}
+} */
 
 h3 {
     padding: 20px 0px;
@@ -65,4 +65,9 @@ h3 {
 h1 {
     padding-top: 90px;
     padding-left: 100px;
+}
+
+button[class="btn btn-outline-primary"] {
+    position: absolute;
+    
 }
