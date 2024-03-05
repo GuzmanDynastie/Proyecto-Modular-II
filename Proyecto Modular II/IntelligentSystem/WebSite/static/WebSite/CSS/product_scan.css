@@ -31,31 +31,31 @@ a.dropdown__ {
     color: rgb(153, 156, 161);
 }
 
-/* .contenedor-columna {
+.contenedor-columna {
     display: flex;
     justify-content: center;
     border: 3px solid rgb(153, 156, 161);
     border-radius: 10px;
     width: 475px;
     margin-left: 67%;
-    margin-top: 3%;
-} */
+    margin-top: -30%;
+}
 
-/* .producto-escaneado {
+.producto-escaneado {
     display: flex;
     justify-content: center;
     width: 300px;
     margin: 30px 0px 35px 70px;
-} */
+} 
 
-/* .video {
+.video {
     position: fixed;
     left: 31%;
-    top: 56%;
+    top: 655px;
     transform: translate(-50%, -50%);
     border: 5px solid;
     border-radius: 10px;
-} */
+}
 
 h3 {
     padding: 20px 0px;
@@ -67,7 +67,6 @@ h1 {
     padding-left: 100px;
 }
 
-button[class="btn btn-outline-primary"] {
-    position: absolute;
-    
+button[class="btn btn-outline-primary"]:first-of-type {
+    margin-left: 100px;
 }
