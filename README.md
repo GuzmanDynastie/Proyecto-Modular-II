@@ -6,8 +6,9 @@
 
 <h2>Prototipo de Scanner para tiendas minoristas de alimentos para perros y gatos</h2>
 <ul>
-  <li>Existen en la actualidad 28/02/2024 4 apps dentro del proyecto DJango</li>
+  <li>Existen en la actualidad 08/03/2024 5 apps dentro del proyecto DJango</li>
   <ul>
+    <li type="square">API</li>
     <li type="square">IntelligentSystem</li>
     <li type="square">Product</li>
     <li type="square">Recognition</li>
