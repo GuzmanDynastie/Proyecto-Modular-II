@@ -68,8 +68,10 @@
                     <a class="dropdown__ nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Ingreso</a>
-                        <a class="dropdown-item" href="#">Registro</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                            data-bs-target="#modalIngreso">Ingreso</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                            data-bs-target="#modalRegistro">Registro</a>
                     </div>
                 </li>
             </ul>
@@ -111,10 +113,89 @@
         </div>
     </div>
 
-    {% comment %} <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+    <!-- Modal Body -->
+    <div class="modal fade" id="modalIngreso" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Ingresar
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <label for="" class="login">Correo</label><br>
+                        <input type="email" placeholder="Ingresa tu correo" class="login-input" required>
+                        <span class="input-group-addon icon">
+                            <i class="fa-solid fa-user a"></i>
+                        </span>
+                        <br>
+                        <label for="" class="login">Password</label><br>
+                        <input type="password" placeholder="Ingresa tu contraseña" class="login-input" required>
+                        <span class="input-group-addon icon">
+                            <i class="fa-solid fa-key"></i>
+                        </span>
+                        <br>
+                        <br>
+                        <input type="submit" value="Login" class="save">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>No tienes cuenta! <a href="" class="link-registro" data-bs-toggle="modal"
+                            data-bs-target="#modalRegistro">Registrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xmd" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Registrar Usuario
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-together">
+                            <input id="name" "text" placeholder="Nombre(s)" class="register-input" required>
+                            <input type="text" placeholder="Apellido(s)" class="register-input" required><br>
+                        </div>
+                        <input type="email" placeholder="Tu correo" class="register-input" required><br>
+                        <input type="password" placeholder="Contraseña" class="register-input" required
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}"><br>
+                        <input type="password" placeholder="Confirmar contraseña" class="register-input" required><br>
+
+                        <input type="submit" value="Registrarse" class="registrar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        const myModal = new bootstrap.Modal(
+            document.getElementById("modalId"),
+            options,
+        );
+    </script>
+
+
+
+    <!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger intent="WELCOME" chat-title="Pet-AesthetiCare" agent-id="2e663f34-8a1d-4bbd-9f69-deeffb87c143"
         language-code="es">
-    </df-messenger> {% endcomment %}
+    </df-messenger> -->
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
